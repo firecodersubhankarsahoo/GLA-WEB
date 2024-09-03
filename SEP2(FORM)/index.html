@@ -1,0 +1,287 @@
+
+<!--            element                                     tag
+
+            1. form                                     <form></form>
+            2. fieldset                                 <fieldset>
+            3.legend                                     <legend>
+            4. input box                                  <input/>
+            5. level                                       <label>
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+  
+</head>
+<body>
+
+<h1> Forms in HTML</h1>
+
+<form action="backend.js">
+  <fieldset>    <!-- it set the field using border-->
+    <legend> this form is about info</legend>     <!-- heading on fieldset-->
+
+    <div>
+     <label for="first" >name</label>                                   <!-- about the input-->
+    <input id="first" type="text" placeholder="enter your name" name="naam" >                        <!-- take input-->
+  </div>
+  <div>
+    <label for="secound">Age</label>
+    <input id="secound" type="number" placeholder="enter your agr" name="age">
+  </div>
+
+  <div>
+
+    <label for="3rd">email</label>
+    <input id="3rd" type="email" placeholder="enter your email id" name="email">
+  </div>
+
+
+
+
+  <div>
+
+    <label for="4th">Password</label>
+    <input id="4th" type="password" placeholder="enter your password" name="pass">
+  </div>
+
+
+  <div>
+    <label for="5th">File</label>
+    <input id="5th" type="file" placeholder="submit your file" name="file">
+  </div>
+
+
+  <div>
+    <label for="6th">date</label>
+    <input id="6th" type="date" placeholder="enter date" name="date">
+  </div>
+
+
+  <div>
+    <label for="7th">Time</label>
+    <input id="7th" type="time" placeholder="enter time" name="time">
+  </div>
+
+
+
+<div>
+  <label for="8th">search</label>
+  <input id="8th" type="search" placeholder="search here" name="search">
+</div>
+
+
+
+
+<div>
+  <label >Gender</label>
+  <input type="checkbox" name="abc"> Male
+  <input  type="checkbox" name="abc"> Female
+  <input  type="checkbox" name="abc"> Male
+</div>
+
+<div>
+  <label >Gender</label>
+  <input  type="radio" name="abcde"> Male
+  <input  type="radio" name="abcde"> Female
+  <input  type="radio" name="abcde"> Male
+<!--  name= same value for 3 input so it will treat all 3 input as  one input so only one input will be selected-->
+</div>
+
+<div>
+
+<label>Movies</label>
+  <select>
+    <option value="">THOR</option>
+    <option value="">KGF</option>
+    <option value="">iron man</option>
+    <option value="">hulk</option>
+    <option value="">dead pool</option>
+    <option value="" selected> stree 2</option>
+  </select>
+
+
+
+  <button type="submit">Submit</button>
+  <button type="reset"> Reset</button>
+  <button type="button"> button</button>
+</div>
+</fieldset>
+</form>
+</body>
+</html>
+
+
+
+
+
+<!--type  can be:---
+
+                1. text
+                2. numbers
+                3. email
+                4. password
+                5.file
+                6.checkbox/radio
+                7.date
+                8.time
+                9.select <option>
+
+
+
+                button:---  1.submit
+                            2.reset
+                            3.disable
+-->
+
+
+<!--
+we must give all input tag a name . so that after submit tab on  we can send and access the data to backend in this case  "backend.js"
+
+the structure in js will be  :--
+
+naam: subhankar
+age: 21
+...........
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+
+<h1>Forms in HTML</h1>
+
+<form action="backend.js">
+  <fieldset>
+    <legend>This form is about info</legend>
+
+    <div>
+      <label for="first">Name</label>
+      <input id="first" type="text" placeholder="Enter your name" name="naam">
+    </div>
+
+    <div>
+      <label for="second">Age</label>
+      <input id="second" type="number" placeholder="Enter your age" name="age">
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Enter your email id" name="email">
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter your password" name="pass">
+    </div>
+
+    <div>
+      <label for="file">File</label>
+      <input id="file" type="file" name="file">
+    </div>
+
+    <div>
+      <label for="date">Date</label>
+      <input id="date" type="date" name="date">
+    </div>
+
+    <div>
+      <label for="time">Time</label>
+      <input id="time" type="time" name="time">
+    </div>
+
+    <div>
+      <label for="search">Search</label>
+      <input id="search" type="search" placeholder="Search here" name="search">
+    </div>
+
+    <div>
+      <label>Gender</label>
+      <input type="checkbox" name="gender" value="male"> Male
+      <input type="checkbox" name="gender" value="female"> Female
+    </div>
+
+    <div>
+      <label>Gender (Radio)</label>
+      <input type="radio" name="genderRadio" value="male"> Male
+      <input type="radio" name="genderRadio" value="female"> Female
+    </div>
+
+    <div>
+      <label for="movies">Movies</label>
+      <select id="movies" name="movies">
+        <option value="thor">Thor</option>
+        <option value="kgf">KGF</option>
+        <option value="ironman">Iron Man</option>
+        <option value="hulk">Hulk</option>
+        <option value="deadpool">Dead Pool</option>
+        <option value="stree2" selected>Stree 2</option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+      <button type="button">Button</button>
+    </div>
+  </fieldset>
+</form>
+
+</body>
+</html>
+
+
+-->
